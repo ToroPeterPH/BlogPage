@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Főoldal | {{ parent() }}{% endblock %}
+{% block body %}
+
+    <div class="nav">
+        {% for navelem in nav %}
+            <div class="navItem">
+                <a href="{{ navelem.link }}" type="_blank"> {{ navelem.nev }} </a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="main">
+
+
+        <h1> {{ title }} </h1>
+
+        <p> Oldal lista: </p>
+
+    </div>
+
+{% endblock %}
+
+{% block returnButton %}
+
+    <div class="returnButton">
+        <a href="{{ path('app_homepage') }}">
+            Főoldal
+        </a>
+    </div>
+
+{% endblock %}

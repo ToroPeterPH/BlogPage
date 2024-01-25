@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Login | {{ parent() }}{% endblock %}
+
+{% block body %}
+
+    <div class="nav">
+        {% for navelem in nav %}
+            <div class="navItem">
+                <a href="{{ navelem.link }}" type="_blank"> {{ navelem.nev }} </a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="main">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <form action="" method="post">
+                        <div class="name">
+                            <input type="text" id="name" placeholder="Név">
+                        </div>
+                        <div class="email">
+                            <input type="email" id="mail" placeholder="Email cím">
+                        </div>
+                        <div class="password">
+                            <input type="password" id="pw1" placeholder="Jelszó"></br>
+                            <input type="password" id="pw2" placeholder="Jelszó megerősítés">
+                        </div>
+                        <input type="submit" value="Regisztráció">
+                    </form>
+                </div>
+
+
+                <div class="col-6">
+                    <form action="" method="post">
+                    <div class="name">
+                        <input type="email" placeholder="Email cím">
+                    </div>
+                    <div class="password">
+                        <input type="password" placeholder="Jelszó">
+                    </div>
+                        <input type="submit" value="Belépés">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block returnButton %}
+
+    <div class="returnButton">
+        <a href="{{ path('app_homepage') }}">
+            Főoldal
+        </a>
+    </div>
+
+{% endblock %}

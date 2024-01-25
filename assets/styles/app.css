@@ -1,0 +1,44 @@
+body{
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    font-size: 20px;
+}
+a , a:active{
+    color: var(--textColor);
+}
+.nav{
+    background: var(--w);
+    box-shadow: 10px 5px 5px var(--b);
+}
+.navItem{
+    display: inline;
+    margin: auto;
+    padding: 1%;
+}
+.navItem a{
+    text-align: center;
+    padding: 14px 46px;
+    text-decoration: none;
+    color: var(--b);
+}
+.main{
+    padding:    50px;
+}
+.returnButton{
+    border:     3px solid var(--textColor);
+
+    font-size:  24px;
+
+    padding:    3px;
+    position:   absolute;
+    right:      2%;
+    bottom:     2%;
+}
+
+:root{
+    --w:            #fff;
+    --b:         #123456;
+    --bgColor:   #5b5b68;
+    --textColor: #e0caa0;
+
+}
